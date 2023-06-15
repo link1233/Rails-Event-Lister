@@ -15,8 +15,6 @@ def web_scraper(url)
     date = card.css('.event-date').text.gsub(/\s+/, ' ').strip
     description = card.css('.event-location').text
 
-
-
     puts "Title: #{title}"
     puts "Description: #{description}"
     puts "Date: #{date}"
