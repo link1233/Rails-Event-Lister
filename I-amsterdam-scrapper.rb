@@ -13,6 +13,7 @@ def web_scraper(url)
     # Extract card title, date and description
     title = card.css('.Card_title__b89tf').text
     date = card.css('.EventCard_eventDate__vGl2i').text
+    link = card.css('a[href]').attribute('href').to_s
 
     # Extract multiple elements within description
     description_elements = card.css('.Card_info__xUQD5').children
@@ -23,11 +24,12 @@ def web_scraper(url)
     puts "Title: #{title}"
     puts "Description: #{description}"
     puts "Date: #{date}"
+    puts "Link: #{link}"
     puts "----------------------"
   end
 end
 
-#make a divider to make the list easier to read
+# make a divider to make the list easier to read
 stars = "*" * 50
 puts stars
 
@@ -41,7 +43,7 @@ end
 puts stars
 
 puts "Theatre and Stage"
-#call the scraper function for theatre and stageshows
+# call the scraper function for theatre and stageshows
 (1..3).each do |number|
   url = "https://www.iamsterdam.com/en/whats-on/calendar/theatre-and-stage/stage?page=#{number}"
   web_scraper(url)
@@ -50,7 +52,7 @@ end
 puts stars
 
 puts "Festivals"
-#call the scraper for festivals
+# call the scraper for festivals
 (1..3).each do |number|
   url ="https://www.iamsterdam.com/en/whats-on/calendar/festivals?page=#{number}"
   web_scraper(url)
