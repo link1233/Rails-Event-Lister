@@ -11,8 +11,8 @@ def web_scraper(url)
   cards.each do |card|
     # Extract relevant information from the card
     # Extract card title, date and description
-    title = card.css('.event-categories').text
-    date = card.css('.event-date').text
+    title = card.css('a h3').text
+    date = card.css('.event-date').text.gsub(/\s+/, ' ').strip
     description = card.css('.event-location').text
 
 
