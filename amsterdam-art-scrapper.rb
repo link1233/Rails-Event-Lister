@@ -14,10 +14,12 @@ def web_scraper(url)
     title = card.css('a h3').text
     date = card.css('.event-date').text.gsub(/\s+/, ' ').strip
     description = card.css('.event-location').text
+    link = card.css('a[href]').attribute('href').to_s
 
     puts "Title: #{title}"
     puts "Description: #{description}"
     puts "Date: #{date}"
+    puts "Link: #{link}"
     puts "----------------------"
   end
 end
