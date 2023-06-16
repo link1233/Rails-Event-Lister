@@ -1,0 +1,10 @@
+<h1>Art Exhibitions</h1>
+
+<% @exhibitions.each do |exhibition| %>
+  <div>
+    <h2><%= exhibition.title %></h2>
+    <p><%= exhibition.description %></p>
+    <p>Date: <%= exhibition.date %></p>
+    <p>Link: <%= link_to exhibition.link, exhibition.link, target: '_blank' %></p>
+  </div>
+<% end %>
