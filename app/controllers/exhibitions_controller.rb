@@ -30,4 +30,9 @@ class ExhibitionsController < ApplicationController
     url = 'https://amsterdamart.com/agenda/'
     web_scraper(url)
   end
+  # def home
+  # end
+
+  # def about
+  # end
 end
