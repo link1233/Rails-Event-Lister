@@ -1,10 +1,13 @@
-<h1>Art Exhibitions</h1>
-
-<% @exhibitions.each do |exhibition| %>
-  <div>
-    <h2><%= exhibition.title %></h2>
-    <p><%= exhibition.description %></p>
-    <p>Date: <%= exhibition.date %></p>
-    <p>Link: <%= link_to exhibition.link, exhibition.link, target: '_blank' %></p>
-  </div>
-<% end %>
+<div class="header">
+ <h1><span class="highlight">Art</span> Exhibitions</h1>
+</div>
+<div class="container">
+  <% @exhibitions.each do |exhibition| %>
+    <div class="card">
+      <h2><%= exhibition.title %></h2>
+      <p><%= exhibition.description %></p>
+       <p>Date: <%= exhibition.date %></p>
+      <a href="<%= exhibition.link %>" target="_blank">View Exhibition</a>
+    </div>
+  <% end %>
+</div>
