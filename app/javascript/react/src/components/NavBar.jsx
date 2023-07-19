@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./NavBar.css";
-
+import "/app/assets/stylesheets/NavBar.css";
 
 const NavBar = () => {
   return (
@@ -35,15 +34,6 @@ const NavBar = () => {
     //           </a>
     //         </li>
     //         <li className="nav-item dropdown">
-    //           <img
-    //             className="avatar dropdown-toggle"
-    //             id="navbarDropdown"
-    //             data-bs-toggle="dropdown"
-    //             aria-haspopup="true"
-    //             aria-expanded="false"
-    //             src="https://kitt.lewagon.com/placeholder/users/ssaunier"
-    //             alt="User Avatar"
-    //           />
     //           <div
     //             className="dropdown-menu dropdown-menu-end"
     //             aria-labelledby="navbarDropdown"
@@ -63,12 +53,26 @@ const NavBar = () => {
     //     </div>
     //   </div>
     // </div>
-  <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-</div>
+    <div className="topnav">
+      <div className="links">
+        <a className="active" href="#home">
+          Home
+        </a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+
+      <img
+        className="avatar"
+        // id="navbarDropdown"
+        // data-bs-toggle="dropdown"
+        // aria-haspopup="true"
+        // aria-expanded="false"
+        src="https://kitt.lewagon.com/placeholder/users/ssaunier"
+        alt="User Avatar"
+      />
+    </div>
   );
 };
 
