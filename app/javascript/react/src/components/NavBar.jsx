@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "/app/assets/stylesheets/NavBar.css";
+import ReactDOM from "react-dom/client";
+import "./style.scss";
 
 const NavBar = () => {
   return (
-    // <div className="navbar">
+  <div className="navbar">
     <div className="topnav">
       <div className="links">
         <a className="active" href="#home">
@@ -15,17 +15,17 @@ const NavBar = () => {
         <a href="#about">About</a>
       </div>
 
+    </div>
       <img
         className="avatar"
         src="https://kitt.lewagon.com/placeholder/users/ssaunier"
         alt="User Avatar"
       />
-    </div>
+  </div>
   );
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<NavBar />, document.getElementById("navbar"));
-});
+const root = ReactDOM.createRoot(document.getElementById("navbar"));
+root.render(<NavBar />);
 
 export default NavBar;

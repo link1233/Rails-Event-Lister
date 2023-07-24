@@ -1,6 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import QuestionList from "./QuestionList";
+import "./style.scss";
 
 const Welcome = () => {
   return (
@@ -12,8 +13,11 @@ const Welcome = () => {
   );
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Welcome />, document.getElementById("welcome"));
-});
+const root = ReactDOM.createRoot(document.getElementById("welcome"));
+root.render(
+  // <React.StrictMode>
+<Welcome />
+   /* </React.StrictMode> */
+);
 
 export default Welcome;
