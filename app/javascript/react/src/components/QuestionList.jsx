@@ -1,39 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import QuestionDetail from "./QuestionDetail";
+import "./style.css";
 
 const QuestionList = () => {
   const questionsList = [
     {
       id: 1,
-      title: "How do I create a new event?",
+      title: <a href="#Event A">Event A</a>,
       tag: "event",
     },
     {
       id: 2,
-      title: "How do I delete an event?",
+      title: <a href="#Event B">Event B</a>,
       tag: "event",
     },
     {
       id: 3,
-      title: "How do I update an event?",
+      title: <a href="#Event C">Event C</a>,
       tag: "event",
     },
     {
       id: 4,
-      title: "How do I read an event?",
+      title: <a href="#Event D">Event D</a>,
       tag: "event",
     },
     {
       id: 5,
-      title: "How do I send an event?",
+      title: <a href="#Event E">Event E</a>,
+      tag: "event",
+    },
+    {
+      id: 6,
+      title: <a href="#Event F">Event F</a>,
+      tag: "event",
+    },
+    {
+      id: 7,
+      title: <a href="#Event G">Event G</a>,
       tag: "event",
     },
   ];
 
   return (
     <div className="row">
-      <div className="col-lg-10 mx-auto">
+      <div className="col-lg-12 md-6 sm-4 mx-auto">
         {questionsList.map((question) => (
           <QuestionDetail question={question} key={question.id} />
         ))}

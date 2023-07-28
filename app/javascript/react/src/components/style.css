@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+/* Styleing the navigation bar */
+
+.avatar {
+  background: none;
+  border-radius: 100px;
+  width: 45px;
+  margin: 2px;
+}
+
+.navbar {
+  background-color: #f9dede;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-right: 20px;
+  height: 50px;
+}
+
+.topnav a {
+  float: left;
+  color: #fb8b8b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #677c74;
+  color: rgb(255, 253, 253);
+  height: 50px;
+}
+
+/* Style the card box */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: inline-grid;
+  /* column-gap: 20px; */
+}
+
+.card-body {
+  width: 200px;
+  height: 400px;
+}
+
+.card-text {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background-color: #677c74;
+  border-radius: 10px;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: rgb(102, 177, 158);
+}
+
+/*style the Welcome component container*/
+.container {
+  background-color: #f9dede;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  width: 100;
+  height: 100;
+}
+
+.container h1 p {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
