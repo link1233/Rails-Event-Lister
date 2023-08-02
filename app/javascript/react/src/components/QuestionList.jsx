@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import QuestionDetail from "./QuestionDetail";
-import "./style.css";
+import '../CSS_Files/style.css';
 
 const QuestionList = () => {
   const questionsList = [

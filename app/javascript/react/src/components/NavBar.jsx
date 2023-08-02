@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./style.css";
+import '../CSS_Files/style.css';
 
 const NavBar = () => {
   return (
