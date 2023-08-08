@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import QuestionDetail from "./QuestionDetail";
+import EventDetail from "./EventDetail";
 import '../CSS_Files/style.css';
 
-const QuestionList = () => {
-  const questionsList = [
+const EventList = () => {
+  const eventsList = [
     {
       id: 1,
       title: <a href="#Event A">Event A</a>,
@@ -45,12 +45,12 @@ const QuestionList = () => {
   return (
     <div className="row">
       <div className="col-lg-12 md-6 sm-4 mx-auto">
-        {questionsList.map((question) => (
-          <QuestionDetail question={question} key={question.id} />
+        {eventsList.map((event) => (
+          <EventDetail event={event} key={event.id} />
         ))}
       </div>
     </div>
   );
 };
 
-export default QuestionList;
+export default EventList;

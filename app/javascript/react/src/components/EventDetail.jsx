@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import '../CSS_Files/style.css';
 
-class QuestionDetail extends React.Component {
+class EventDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = { likeCount: 0 };
@@ -17,15 +17,17 @@ class QuestionDetail extends React.Component {
     return (
       <div className="card rounded-0 mt-3">
         <div className="card-body">
+          <div className="card-img-continer">
           <img
             className="card-img"
             src="https://source.unsplash.com/random/240x320/?gallery"
             alt="Card image cap"
           />
+          </div>
           <div className="card-text">
-            <h3 className="card-title">{this.props.question.title}</h3>
+            <h3 className="card-title">{this.props.event.title}</h3>
             <p className="lead">
-              <span className="badge">{this.props.question.tag}</span>
+              <span className="badge">{this.props.event.tag}</span>
             </p>
             <button
               className="btn my-1"
@@ -45,7 +47,7 @@ class QuestionDetail extends React.Component {
   }
 };
 
-// const QuestionDetail = (props) => {
+// const EventDetail = (props) => {
 //   const [likeCount, setLikeCount] = React.useState(0);
 
 //   return (
@@ -57,9 +59,9 @@ class QuestionDetail extends React.Component {
 //           alt="Card image cap"
 //         />
 //         <div className="card-text">
-//           <h3 className="card-title">{props.question.title}</h3>
+//           <h3 className="card-title">{props.event.title}</h3>
 //           <p className="lead">
-//             <span className="badge">{props.question.tag}</span>
+//             <span className="badge">{props.event.tag}</span>
 //           </p>
 //           <button
 //             className="btn my-1"
@@ -78,4 +80,4 @@ class QuestionDetail extends React.Component {
 //   );
 // };
 
-export default QuestionDetail;
+export default EventDetail;

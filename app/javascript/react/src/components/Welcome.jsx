@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import QuestionList from "./QuestionList";
+import EventList from "./EventList";
 import '../CSS_Files/style.css';
 
 class Welcome extends React.Component {
@@ -9,7 +9,7 @@ class Welcome extends React.Component {
       <div className="container">
         <h1>Welcome to Event Lister</h1>
         <p className="lead">This is place holder text</p>
-        <QuestionList />
+        <EventList />
       </div>
     );
   };
