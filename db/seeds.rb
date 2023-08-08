@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+puts 'Cleaning database...'
+Event.destroy_all
+
+puts 'Creating 10 fake events...'
+events = 10.times do
+  Event.create(
+    title: Faker::Lorem.sentence(word_count: 3),
+    tag: Faker::Lorem.word
+  )
+end
+
+puts 'Finished!'
