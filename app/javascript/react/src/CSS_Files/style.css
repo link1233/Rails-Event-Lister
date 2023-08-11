@@ -7,8 +7,9 @@
 .avatar {
   background: none;
   border-radius: 50%;
-  width: 40px;
-  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
 }
 
 .navbar {
@@ -52,8 +53,9 @@
 }
 
 .card-body {
-  width: 200px;
+  width: 250px;
   height: 400px;
+  padding: 0px;
 }
 
 .card-text {
@@ -64,13 +66,14 @@
 .card-img-continer{
   object-position: center;
   object-fit: contain;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card-img {
-  width: 200px;
+  width: 230px;
   height: 200px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .btn {

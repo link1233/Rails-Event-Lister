@@ -1,46 +1,45 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import { useState, useEffect } from "react";
+import * as ReactDOM from "react-dom";
 import EventDetail from "./EventDetail";
-import '../CSS_Files/style.css';
+import "../CSS_Files/style.css";
 
 const EventList = () => {
-  const eventsList = [
-    {
-      id: 1,
-      title: <a href="#Event A">Event A</a>,
-      tag: "event",
-    },
-    {
-      id: 2,
-      title: <a href="#Event B">Event B</a>,
-      tag: "event",
-    },
-    {
-      id: 3,
-      title: <a href="#Event C">Event C</a>,
-      tag: "event",
-    },
-    {
-      id: 4,
-      title: <a href="#Event D">Event D</a>,
-      tag: "event",
-    },
-    {
-      id: 5,
-      title: <a href="#Event E">Event E</a>,
-      tag: "event",
-    },
-    {
-      id: 6,
-      title: <a href="#Event F">Event F</a>,
-      tag: "event",
-    },
-    {
-      id: 7,
-      title: <a href="#Event G">Event G</a>,
-      tag: "event",
-    },
-  ];
+  //use state to set events//
+  const [eventsList, setEventsList] = useState([]);
+  //use effect to fetch data from api//
+  const eventsUrl = "http://localhost:3000/api/v1/events";
+
+  const fetchEventList = () => {
+    fetch(eventsUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setEventsList(data);
+      });
+  };
+  // set up event list//
+  useEffect(() => {
+    fetchEventList();
+  }, []);
+
+  // const eventsList = [
+  //   {
+  //     id: 1,
+  //     title: "Event 1",
+  //     tag: "This is event 1",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Event 2",
+  //     tag: "This is event 2",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Event 3",
+  //     tag: "This is event 3",
+  //   }
+  // ]
 
   return (
     <div className="row">
